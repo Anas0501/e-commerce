@@ -60,16 +60,13 @@ const orderSchema = new mongoose.Schema({
 	paymentInfo: {
 		id: {
 			type: String,
-			required: true
 		},
 		status: {
 			type: String,
-			required: true
 		},
 	},
 	paidAt: {
 		type: Date,
-		required: true
 	},
 	totalPrice: {
 		type: Number,
@@ -78,7 +75,6 @@ const orderSchema = new mongoose.Schema({
 	},
 	orderStatus: {
 		type: String,
-		required: true,
 		default: "Processing",
 	},
 	deliveredAt: Date,

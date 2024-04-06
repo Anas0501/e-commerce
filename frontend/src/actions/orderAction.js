@@ -13,6 +13,7 @@ export const newOrder = (order) => async (dispatch) => {
         };
 
         const { data } = await axios.post('/api/v1/order/new', order, config);
+        console.log('order:', order)
 
         dispatch({
             type: NEW_ORDER_SUCCESS,
