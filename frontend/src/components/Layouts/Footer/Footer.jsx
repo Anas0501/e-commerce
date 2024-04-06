@@ -12,31 +12,31 @@ const footerLinks = [
     links: [
       {
         name: "Contact Us",
-        redirect: "https://www.flipkart.com/helpcentre",
+        redirect: "/",
       },
       {
         name: "About Us",
-        redirect: "https://www.flipkart.com/about-us",
+        redirect: "/",
       },
       {
         name: "Careers",
-        redirect: "https://www.flipkartcareers.com",
+        redirect: "/",
       },
       {
         name: "Flipkart Stories",
-        redirect: "https://stories.flipkart.com",
+        redirect: "/",
       },
       {
         name: "Press",
-        redirect: "https://stories.flipkart.com/category/top-stories/news",
+        redirect: "/",
       },
       {
         name: "Flipkart Wholesale",
-        redirect: "https://www.flipkartwholesale.com",
+        redirect: "/",
       },
       {
         name: "Corporate Information",
-        redirect: "https://www.flipkart.com/corporate-information",
+        redirect: "/",
       },
     ]
   },
@@ -45,19 +45,19 @@ const footerLinks = [
     links: [
       {
         name: "Payments",
-        redirect: "https://www.flipkart.com/pages/payments",
+        redirect: "/",
       },
       {
         name: "Shipping",
-        redirect: "https://www.flipkart.com/pages/shipping",
+        redirect: "/",
       },
       {
         name: "Cancellation & Returns",
-        redirect: "https://www.flipkart.com/helpcentre?catalog=55c9c6edb000002e002c1701&view=CATALOG",
+        redirect: "/",
       },
       {
         name: "FAQ",
-        redirect: "https://www.flipkart.com/helpcentre?catalog=55c9c8e2b0000023002c1702&view=CATALOG",
+        redirect: "/",
       }
     ]
   },
@@ -66,27 +66,27 @@ const footerLinks = [
     links: [
       {
         name: "Return Policy",
-        redirect: "https://www.flipkart.com/pages/returnpolicy",
+        redirect: "/",
       },
       {
         name: "Terms Of Use",
-        redirect: "https://www.flipkart.com/pages/terms",
+        redirect: "/",
       },
       {
         name: "Security",
-        redirect: "https://www.flipkart.com/pages/paymentsecurity",
+        redirect: "/",
       },
       {
         name: "Privacy",
-        redirect: "https://www.flipkart.com/pages/privacypolicy",
+        redirect: "/",
       },
       {
         name: "Sitemap",
-        redirect: "https://www.flipkart.com/sitemap",
+        redirect: "/",
       },
       {
         name: "EPR Compliance",
-        redirect: "https://www.flipkart.com/pages/ewaste-compliance-tnc",
+        redirect: "/",
       },
     ]
   },
@@ -95,15 +95,15 @@ const footerLinks = [
     links: [
       {
         name: "Facebook",
-        redirect: "https://www.facebook.com/flipkart",
+        redirect: "/",
       },
       {
         name: "Twitter",
-        redirect: "https://twitter.com/flipkart",
+        redirect: "/",
       },
       {
         name: "YouTube",
-        redirect: "https://www.youtube.com/flipkart",
+        redirect: "/",
       }
     ]
   }
@@ -129,7 +129,7 @@ const Footer = () => {
                 <div className="w-full sm:w-1/5 flex flex-col gap-2 my-3 sm:my-6 ml-5" key={i}>
                   <h2 className="text-primary-grey mb-2 uppercase">{el.title}</h2>
                   {el.links.map((item, i) => (
-                    <a href={item.redirect} target="_blank" rel="noreferrer" className="hover:underline" key={i}>{item.name}</a>
+                    <a href={item.redirect} rel="noreferrer" className="hover:underline" key={i}>{item.name}</a>
                   ))}
 
                 </div>
@@ -168,16 +168,16 @@ const Footer = () => {
           {/* <!-- footer ends --> */}
 
           <div className="px-16 py-6 w-full bg-primary-darkBlue hidden sm:flex justify-between items-center text-sm text-white">
-            <a href="https://seller.flipkart.com/sell-online" target="_blank" rel="noreferrer" className="flex items-center gap-2">
+            <a href="/" rel="noreferrer" className="flex items-center gap-2">
               <span className="text-yellow-400"><WorkIcon sx={{ fontSize: "20px" }} /></span> Sell On Flipkart
             </a>
-            <a href="https://brands.flipkart.com" target="_blank" rel="noreferrer" className="flex items-center gap-2">
+            <a href="/" rel="noreferrer" className="flex items-center gap-2">
               <span className="text-yellow-400"><StarsIcon sx={{ fontSize: "20px" }} /></span> Advertise
             </a>
-            <a href="https://www.flipkart.com/the-gift-card-store" rel="noreferrer" target="_blank" className="flex items-center gap-2">
+            <a href="/" rel="noreferrer" className="flex items-center gap-2">
               <span className="text-yellow-400"><CardGiftcardIcon sx={{ fontSize: "20px" }} /></span> Gift Cards
             </a>
-            <a href="https://www.flipkart.com/helpcentre" target="_blank" rel="noreferrer" className="flex items-center gap-2">
+            <a href="/" rel="noreferrer" className="flex items-center gap-2">
               <span className="text-yellow-400"><HelpIcon sx={{ fontSize: "20px" }} /></span> Help Center
             </a>
 
