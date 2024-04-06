@@ -10,9 +10,11 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import MetaData from '../Layouts/MetaData';
 import Stepper from './Stepper';
+import { useNavigate } from 'react-router-dom';
 import PriceSidebar from './PriceSidebar';
 
 const Payment = () => {
+	const navigate = useNavigate();
 	const dispatch = useDispatch();
 	const { enqueueSnackbar } = useSnackbar();
 	const [payDisable, setPayDisable] = useState(false);
@@ -106,7 +108,9 @@ const Payment = () => {
 			};
 			console.log('orderData:', order);
 			
-			dispatch(newOrder(order));
+			dispatch(newOrder(order)).then(() => {
+				navigate('/')
+			})
 		} catch (error) {
 			setPayDisable(false);
 			const errorMessage = error.response
