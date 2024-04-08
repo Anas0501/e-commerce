@@ -36,6 +36,7 @@ import UpdateUser from './components/Admin/UpdateUser';
 import ReviewsTable from './components/Admin/ReviewsTable';
 import Wishlist from './components/Wishlist/Wishlist';
 import NotFound from './components/NotFound';
+import axios from 'axios';
 
 function App() {
 
@@ -69,6 +70,8 @@ function App() {
 			behavior: "smooth"
 		});
 	}, [pathname])
+
+	axios.defaults.baseURL = 'https://backend-e-commerce-7t60.onrender.com';
 
 	// disable right click
 	window.addEventListener("contextmenu", (e) => e.preventDefault());
